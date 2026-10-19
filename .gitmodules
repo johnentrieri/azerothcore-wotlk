@@ -1,4 +1,0 @@
-[submodule "fusioncms"]
-	path = fusioncms
-	url = https://github.com/johnentrieri/FusionCMS.git
-	branch = johnwow

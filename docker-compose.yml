@@ -204,27 +204,11 @@ services:
     depends_on:
       ac-database:
         condition: service_healthy
-  # FusionCMS website
-  fusioncms:
-    build:
-      context: ./fusioncms
-      dockerfile: Dockerfile
-    container_name: fusioncms-web
-    ports:
-      - "8082:80"
-    volumes:
-      # This binds your actual local folder directly into the container in real-time
-      - ./fusioncms:/var/www/html
-    networks:
-      - ac-network
-    depends_on:
-      - ac-database
 volumes:
   ac-database:
   ac-client-data:
   # Used for dev server
   ac-build-dev:
   ac-ccache-dev:
-
 networks:
   ac-network:
